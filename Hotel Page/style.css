@@ -1,0 +1,159 @@
+
+body{
+    margin: none;
+}
+
+#imagem{
+    background-color: violet;
+  width: 100%;
+  height: 800px;
+  background-image: url('banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom
+    
+}
+
+#logo{
+
+    
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#fotter{
+    margin-top: 2%;
+    width: 100%;
+    height: 3vh;
+    background-color: #0d659d;
+    color: white;
+    text-align: center;
+    display: inline-table;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.redes_socias{
+    font-size: 1em;
+    margin: 0.8%;
+    display: inline-flex;
+    font-family: 'Text Me One', sans-serif;
+    margin-left: 8%;
+}
+
+.titulo{
+    color: black;
+    font-size: 2.7em;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding-bottom: 2%;
+    
+    width: 55%;
+    font-weight: 600;
+    font-family: 'Text Me One', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-bottom: 1px solid #0d659d;
+
+}
+
+.texto_fotter{
+
+    margin-top: 3%;
+    white-space: nowrap;
+    
+}
+
+.imagem_fotter{
+    display: inline;
+    margin-right: 5%;
+}
+
+.caixa{
+    width: 28%;
+    height: 350px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(80, 80, 80, 0.5);
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#pacotes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+.titulo2{
+    color: black;
+    font-weight: 600;
+    font-size: 1.7em;
+    margin-top: 7%;
+    height: 4vh;
+    width: 75%;
+    margin-bottom: 3%;
+    padding-bottom: 10px;
+    font-family: 'Text Me One', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-bottom: 1px solid #0d659d;
+
+}
+
+.texto_caixa{
+
+    color: black;
+    font-size: 1.5em;
+    font-family: 'Text Me One', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: 15%;
+    margin-right: 15%;
+    
+    margin-top: 6%;
+
+}
+
+.preco{
+
+    color: black;
+    font-size: 1.7em;
+    font-family: 'Text Me One', sans-serif;
+    margin-left: 40%;
+    margin-top: 15%;
+    font-weight: 600;
+    margin-bottom: 10%;
+    
+
+}
+.preco2{
+
+    color: black;
+    font-size: 1.7em;
+    font-family: 'Text Me One', sans-serif;
+    margin-left: 40%;
+    font-weight: 600;
+    margin-bottom: 8%;
+    
+
+}
