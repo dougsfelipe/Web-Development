@@ -13,8 +13,8 @@ class QS{
     int[] number ;
     int size ;
 
-    // Invoke the Initialization, Sort and Printing
-    // Methods
+    /*Invoke the Initialization, Sort and Printing
+     Methods */
     public int Start(int sz){
 	int aux01 ;
 	aux01 = this.Init(sz);

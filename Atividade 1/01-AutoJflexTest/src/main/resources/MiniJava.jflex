@@ -14,22 +14,27 @@ package br.ufpe.cin.if688.jflex;
 %eofclose
 
 /* Insira as regras lexicas abaixo */
-Inteiros = [0-9]+
-Identificadores = ([A-Za-z]|[_])([A-Za-z]|[0-9]|[_])*
-Whitespace =[ \n|\t|\r|\f|] 
-Comentarios = ["/*" [^*] ~"*/" | "//".* ]
+Identificador = [A-Za-z]|{letra}({letra}|{digito})*
+letra = [A-Za-z]
+digito = [0-9]
+inteiro = 0 | [1-9][0-9]*
+Whitespace =[\n|\t|\r|\f] 
+Comentarios = ["/*" [^*] ~"*/" | "/*" "*"+ "/" ]
 Reservados = "class"|"static"|"extends"|"public"|"main"|"void"|"String"|"int"|"boolean"|"while"|"if"|"else"|"return"|"length"|"true"|"false"|"this"|"new"|"System.out.println"
-Operadores = ["<"]|["=="]|["!="]|["+"]|["-"]|["*"]|["!"]|["&&"]
-Delimitadores = ";"|"."|","|"="|"("|")"|"]"|"["|"{"|"}"
+Operadores = [&]|[<]|[==]|[!=]|[+]|[-]|[*]|[!]
+Delimitadores = [";"|"."|","|"="|"("|")"|"]"|"["|"{"|"}"]
 
 %%
 {Reservados} {System.out.println("token gerado foi um reservado: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);} 
-{Delimitadores} {System.out.println("token gerado foi um delimitador: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);}   
+{Delimitadores} {System.out.println("token gerado foi um delimitador: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);}
+{Operadores} {System.out.println("token gerado foi um operador: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);}   
+{inteiro} {System.out.println("token gerado foi um integer: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);} 
+{Identificador} {System.out.println("token gerado foi um id: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);}
+{Comentarios} {}
 {Whitespace} {}    
-{Comentarios} {System.out.print(" ");}
-{Operadores} {System.out.println("token gerado foi um operador: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);} 
-{Inteiros} {System.out.println("token gerado foi um integer: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);}
-{Identificadores} {System.out.println("token gerado foi um id: '"+yytext()+"' na linha: "+yyline+", coluna: "+yycolumn);}
+
+
+
 
  
 
